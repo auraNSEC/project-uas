@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Salai Patin Mak Ijah</title>
+    
+    <style>
+        /* === VARIABEL WARNA === */
+        :root {
+            --gofood-red: #008c45;
+            --bg-light: #f5f6f8;
+            --card-bg: #ffffff;
+            --text-dark: #1c1c1c;
+            --text-muted: #757575;
+            --border-color: #e5e7e9;
+        }
+
+        /* === RESET & GLOBAL === */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* Menggunakan font bawaan sistem (seperti di aplikasi Android/iOS) */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        /* === HEADER APP-BAR === */
+        header {
+            background-color: var(--card-bg);
+            padding: 16px 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: var(--gofood-red);
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* === MAIN CONTAINER (Tampilan ala Feed/List Menu) === */
+        main {
+            max-width: 600px; /* Dibatasi agar terasa seperti UI Aplikasi Mobile */
+            margin: 20px auto;
+            padding: 0 16px;
+            display: grid;
+            gap: 20px;
+        }
+
+        /* === CARD GALERI === */
+        figure {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+
+        figure:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Override atribut width="300" dari HTML agar gambar responsif */
+        figure img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover; /* Agar gambar tidak gepeng, terpotong rapi */
+            display: block;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        figcaption {
+            padding: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 32px 16px;
+            color: var(--text-muted);
+        }
+
+        footer p {
+            font-size: 13px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><a href="index.html">&larr; Kembali ke Beranda</a></nav>
+        <h1>Galeri Salai Patin Mak Ijah</h1>
+    </header>
+    
+    <main>
+        <figure>
+            <img src="images/kolampatin.webp" alt="Kolam ikan patin milik warga" width="300">
+            <figcaption>1. Panen patin dari kolam warga</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/prosessalaipatin.webp" alt="Ikan patin disusun di atas rak pengasapan" width="300">
+            <figcaption>2. Proses pengasapan tradisional</figcaption>
+        </figure>
+        
+        <figure>
+            <img src="images/salaipatin.webp" alt="Salai patin siap dikemas" width="300">
+            <figcaption>3. Salai patin siap dikemas</figcaption>
+        </figure>
+    </main>
+    
+    <footer>
+        <p><small>&copy; 2026 Salai Patin Mak Ijah</small></p>
+    </footer>
+</body>
+</html>
